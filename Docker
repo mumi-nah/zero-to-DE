@@ -1,1 +1,30 @@
 
+# Intro
+
+## What is Docker?
+Before talking about Docker, I believe the starting point should be "containerization". Containerization is the act of running software or applications in an isolated environment. This environment shares the OS of the host machine to run said software.
+Docker aids containerization. It is an open-source platform that enables developers to package, ship, and run applications in a standardized environment called containers. It solves a quite common issue among developers: "It runs on my machine", bundling an application with all its necessary dependencies, libraries, and configuration files into a single unit that runs consistently across any infrastructure. 
+
+## Docker Components
+
+---
+
+### Docker Engine
+The Docker engine acts as a client-server application. Users can trigger Docker actions through the Docker client, either the graphical user interface (GUI) or the CLI. The Docker Daemon is the core service responsible for building, running, and managing Docker objects. It listens for instructions from the Docker client and carries them out.
+![Docker architecture](https://treinetic.com/wp-content/uploads/2024/12/Docker-Architecture-1536x1048.png)
+
+### Docker Image
+A Docker image is the blueprint for creating a container. It is where you specify the structure and the contents of your container. In practice, images are either custom-made or downloaded from Docker Hub. When creating an image, there are keywords to specify each action. An image always starts with the **FROM** clause, which imports a container. Images are built on existing images. For example, when building an app with Python in a container, the image is built on a Python image. After creating the image, the command "docker run <image_name>" is used to start the container.
+Back to Images from Docker Hub, when you want to get an image from Docker Hub, you use the **docker pull <image_name>** command.
+Lastly, after an image has been successfully created, one would build the image, then run it to create a container (which would be discussed further), and one could also want to share it publicly or with specific people. 
+To share an image, one could download it and share it like you would share any other file; you could also push it to GitHub registry using the **git push** command.
+
+
+### Docker Container
+
+A container is a running instance of an image
+### Docker Compose
+
+### Volume
+
+### Docker Hub
